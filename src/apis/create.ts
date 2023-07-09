@@ -1,5 +1,4 @@
 import axios from 'axios';
-import fs from 'fs';
 import * as C from '../__constants__.js';
 import Logger from '../logs/logger.js';
 import { MTSRecipe } from '../types';
@@ -93,25 +92,25 @@ class CreateMTS {
       },
     };
 
-    this.storeRecipe(recipe);
+    // this.storeRecipe(recipe);
 
     return recipe;
   }
 
-  private storeRecipe(recipe: MTSRecipe): void {
-    const recipePath = this.datadir + '/recipe';
-    const recipeName = this.params.id + '_recipe.json';
-    const recipePathAndName = recipePath + '/' + recipeName;
+  //   private storeRecipe(recipe: MTSRecipe): void {
+  //     const recipePath = this.datadir + '/recipe';
+  //     const recipeName = this.params.id + '_recipe.json';
+  //     const recipePathAndName = recipePath + '/' + recipeName;
 
-    if (!fs.existsSync(recipePath)) {
-      fs.mkdirSync(recipePath);
-    }
+  //     if (!fs.existsSync(recipePath)) {
+  //       fs.mkdirSync(recipePath);
+  //     }
 
-    fs.writeFileSync(recipePathAndName, JSON.stringify(recipe));
+  //     fs.writeFileSync(recipePathAndName, JSON.stringify(recipe));
 
-    // --------------------
-    Logger.log('your recipe is stored');
-  }
+  //     // --------------------
+  //     Logger.log('your recipe is stored');
+  //   }
 }
 
 export { CreateMTS };
