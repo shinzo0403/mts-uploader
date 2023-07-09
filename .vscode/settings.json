@@ -1,0 +1,10 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  //   "path-autocomplete.pathMappings": {
+  //     "@": "${folder}/src"
+  //   },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}

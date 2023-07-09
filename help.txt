@@ -1,0 +1,4 @@
+-u Your mts account username
+-t Your access token
+-d Directory containing files to be uploaded
+-e (optional) Encoding 
